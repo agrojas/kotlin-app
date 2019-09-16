@@ -1,18 +1,18 @@
 package com.example.kotlinapp.view
 
-import com.example.kotlinapp.model.User
+import com.example.kotlinapp.model.Pet
+import okhttp3.ResponseBody
 
 interface View
 
-
-interface CreateUserView: View {
-    fun showEmptyNameError() /* show error when name is empty */
-    fun showEmptySurnameError() /* show error when surname is empty */
-    fun showUserSaved() /* show user saved info */
-    fun showUserDetails(user: User) /* show user details */
+interface PetsView: View {
+    fun showPets(pets: List<Pet>)
+    fun showPetsError(error: Throwable)
+    fun showPetsError(error: ResponseBody?)
+    fun showPetDetails(pet: Pet)
 }
 
-interface UserDetailsView: View {
-    fun showUserDetails(user: User)
-    fun showNoUserError()
+interface PetDetailsView: View {
+    fun showPetDetails(pet: Pet)
+    fun showNoPetError()
 }

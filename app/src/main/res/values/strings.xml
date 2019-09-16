@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">KotlinApp</string>
+    <string name="app_name">Pets App</string>
     <string name="name_empty_error">Name can\'t be blank</string>
     <string name="surname_empty_error">Surname can\'t be blank</string>
     <string name="user_saved">User saved</string>
     <string name="no_user_error">No user passed</string>
+    <string name="find_button_text">Find pets</string>
 </resources>

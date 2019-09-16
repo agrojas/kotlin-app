@@ -8,28 +8,8 @@
         tools:context="com.example.kotlinapp.view.activity.MainActivity"
         android:padding="@dimen/activity_horizontal_margin">
 
-    <EditText
-            android:layout_marginTop="50dp"
-            android:id="@+id/userName"
-            android:hint="Name"
-            android:inputType="textPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    <EditText
-            android:id="@+id/userSurname"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/userName"
-            android:hint="Surname"
-            android:inputType="textPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    <Button
-            android:id="@+id/saveUserBtn"
-            android:layout_marginTop="10dp"
-            android:text="Save user"
-            android:layout_below="@id/userSurname"
+    <ListView
+            android:id="@+id/list_pet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
