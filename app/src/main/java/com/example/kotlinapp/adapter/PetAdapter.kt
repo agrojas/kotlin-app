@@ -11,7 +11,7 @@ import com.example.kotlinapp.model.Pet
 import com.example.kotlinapp.presenter.PetPresenter
 import com.example.kotlinapp.view.PetsView
 
-class PetAdapter(context:Context, val dataSource: ArrayList<Pet>, presenter: PetPresenter<PetsView>): BaseAdapter() {
+class PetAdapter(context: Context, val dataSource: ArrayList<Pet>, presenter: PetPresenter<PetsView>) : BaseAdapter() {
 
     private val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
@@ -19,14 +19,11 @@ class PetAdapter(context:Context, val dataSource: ArrayList<Pet>, presenter: Pet
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val rowView = inflater.inflate(R.layout.list_item_pet, parent, false)
-        val idTextView = rowView.findViewById(R.id.pet_list_id) as TextView
-        val statusTextView = rowView.findViewById(R.id.pet_list_status) as TextView
         val nameTextView = rowView.findViewById(R.id.pet_list_name) as TextView
+        val button = rowView.findViewById(R.id.button) as TextView
         val pet = this.getItem(position)
-        idTextView.text = pet.id.toString()
-        statusTextView.text = pet.status
         nameTextView.text = pet.name
-        rowView.setOnClickListener {
+        button.setOnClickListener {
             presenter.showPetDetails(pet)
         }
         return rowView

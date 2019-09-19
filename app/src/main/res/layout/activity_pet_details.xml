@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical" android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:padding="@dimen/activity_horizontal_margin">
+              android:padding="@dimen/activity_horizontal_margin" android:id="@+id/linearLayout">
 
-    <TextView
-            android:id="@+id/pet_details_id"
-            tools:text=""
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
 
-    <TextView
-            android:id="@+id/pet_details_name"
-            tools:text=""
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="374dp"
+            android:layout_height="152dp">
+        <ImageView
+                android:id="@+id/pet_details_image"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
+                android:contentDescription="pet"
+        />
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:id="@+id/pet_details_id"
+                    tools:text="ID"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/pet_details_status"
+                    tools:text="status"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
-    <TextView
-            android:id="@+id/pet_details_status"
-            tools:text=""
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            <TextView
+                    android:id="@+id/pet_details_name"
+                    tools:text="Name"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
 

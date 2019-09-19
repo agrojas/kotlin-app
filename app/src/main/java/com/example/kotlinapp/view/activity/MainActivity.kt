@@ -1,8 +1,8 @@
 package com.example.kotlinapp.view.activity
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.ListView
 import android.widget.Toast
 import com.example.kotlinapp.R
@@ -17,7 +17,7 @@ import okhttp3.ResponseBody
 class MainActivity : AppCompatActivity(), PetsView {
 
 
-    private val presenter: PetPresenter<PetsView> by lazy{
+    private val presenter: PetPresenter<PetsView> by lazy {
         PetPresenterImpl(this)
     }
 
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity(), PetsView {
     override fun showPetsError(error: Throwable) {
         Toast.makeText(this, "Error ${error.localizedMessage}", Toast.LENGTH_SHORT).show()
     }
+
     override fun showPetsError(error: ResponseBody?) {
         Toast.makeText(this, "Error ${error.toString()}", Toast.LENGTH_SHORT).show()
     }

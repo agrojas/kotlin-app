@@ -36,7 +36,7 @@ data class Category(val id: Int, val name: String) : Parcelable {
 /**
  *
  */
-data class Tag(val id: Int, val name: String): Parcelable {
+data class Tag(val id: Int, val name: String) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()
@@ -66,12 +66,14 @@ data class Tag(val id: Int, val name: String): Parcelable {
 /**
  *
  */
-data class Pet(val id: Int,
-               val category: Category,
-               val name: String,
-               val photoUrls: List<String>,
-               val tags: List<Tag>,
-               val status: String) : Parcelable {
+data class Pet(
+    val id: Int,
+    val category: Category,
+    val name: String,
+    val photoUrls: List<String>,
+    val tags: List<Tag>,
+    val status: String
+) : Parcelable {
 
 
     constructor(parcel: Parcel) : this(

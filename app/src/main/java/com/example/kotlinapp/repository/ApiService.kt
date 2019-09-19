@@ -14,10 +14,12 @@ object ApiService {
     fun <S> create(clazz: Class<S>) = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(OkHttpClient())
-        .addConverterFactory(GsonConverterFactory.create(
-            GsonBuilder()
-                .setDateFormat(DATE_FORMAT)
-                .create()
-        )).build()
+        .addConverterFactory(
+            GsonConverterFactory.create(
+                GsonBuilder()
+                    .setDateFormat(DATE_FORMAT)
+                    .create()
+            )
+        ).build()
         .create(clazz)
 }

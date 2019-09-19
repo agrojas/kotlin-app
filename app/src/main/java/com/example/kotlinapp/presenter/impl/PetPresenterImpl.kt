@@ -7,7 +7,7 @@ import com.example.kotlinapp.repository.Repository
 import com.example.kotlinapp.view.PetsView
 import retrofit2.Response
 
-class PetPresenterImpl(override var view: PetsView?): PetPresenter<PetsView> {
+class PetPresenterImpl(override var view: PetsView?) : PetPresenter<PetsView> {
 
 
     private val TAG = PetPresenterImpl::class.java.simpleName
@@ -22,7 +22,7 @@ class PetPresenterImpl(override var view: PetsView?): PetPresenter<PetsView> {
         if (response.isSuccessful) {
             Log.i(TAG, "Response is Successful!")
             view?.showPets(response.body().orEmpty())
-        } else if (!response.isSuccessful){
+        } else if (!response.isSuccessful) {
             view?.showPetsError(response.errorBody())
         }
     }

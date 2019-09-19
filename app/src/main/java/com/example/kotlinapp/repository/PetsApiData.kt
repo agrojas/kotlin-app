@@ -11,5 +11,4 @@ class PetsApiData : DataSource<Pet> {
         return api.getPetList()
     }
 
-
 }
